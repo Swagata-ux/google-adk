@@ -1,34 +1,16 @@
-from typing import Dict, Any
 from google.adk.agents.llm_agent import Agent
-from google.adk.agents import LlmAgent
 from google.adk.tools import FunctionTool
+
 from tools.helpdesk_tools import (
     lookup_user_impl,
     check_service_status_impl,
     create_ticket_impl,
 )
 
-# Tools fail gracefully. 
-# agent doesnt crash if tool fails.
-# Users always get a helpful next step, even when things break. 
 
-
-# Throw exception 
-# Log it
-# Display a message
-
-
-lookup_user_tool = FunctionTool(
-    func=lookup_user_impl,
-)
-
-check_service_status_tool = FunctionTool(
-    func=check_service_status_impl,
-)
-
-create_ticket_tool = FunctionTool(
-    func=create_ticket_impl,
-)
+lookup_user_tool = FunctionTool(func=lookup_user_impl)
+check_service_status_tool = FunctionTool(func=check_service_status_impl)
+create_ticket_tool = FunctionTool(func=create_ticket_impl)
 
 root_agent = Agent(
     model='gemini-2.5-flash',
@@ -112,7 +94,5 @@ root_agent = Agent(
         "- If tools return an error or you are uncertain, say so clearly and suggest talking to IT.\n"
         "- Never reveal private data beyond what the user has already provided.\n"
     ),
-    tools=[lookup_user_tool,
-        check_service_status_tool,
-        create_ticket_tool],
+    tools=[lookup_user_tool, check_service_status_tool, create_ticket_tool],
 )

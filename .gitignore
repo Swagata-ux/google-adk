@@ -1,4 +1,31 @@
-ticketpro/tools/__pycache__/__init__.cpython-314.pyc
-/ticketpro/tools/__pycache__
-/ticketpro/schemas/__pycache__
-/ticketpro/helpdesk_agent/.adk
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+.env.local
+
+# ADK artifacts
+.adk/
+*.evalset.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

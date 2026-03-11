@@ -4,6 +4,10 @@ A collection of demonstration projects for our Kodekloud course on the **Google 
 
 These projects showcase agent development patterns from basic to advanced implementations.
 
+> 📚 **New to the project?** Check out the [Documentation Index](INDEX.md) to find the right guide for you!
+
+> ⚡ **Want to start quickly?** Jump to the [Quick Start Guide](QUICKSTART.md) for a 5-minute setup!
+
 ## Projects
 
 ### 1. [hello-world](./hello-world/)
@@ -31,6 +35,8 @@ A sophisticated helpdesk agent showcasing:
 Demonstrates production-ready patterns for real-world applications.
 
 ## Quick Start
+
+**⚡ New to the project? Check out the [Quick Start Guide](QUICKSTART.md) for a 5-minute setup!**
 
 ### Prerequisites
 
@@ -111,6 +117,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Google ADK Documentation](https://cloud.google.com/adk)
 - [ADK API Reference](https://cloud.google.com/adk/docs/reference)
 - [Agent Development Best Practices](https://cloud.google.com/adk/docs/best-practices)
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Quick Links
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Changelog](CHANGELOG.md)
+- [Recent Improvements](IMPROVEMENTS.md)
+
+## Development
+
+### Using Make Commands
+```bash
+make install    # Install all dependencies
+make test       # Run tests
+make clean      # Remove cache files
+make lint       # Run linting
+make format     # Format code
+```
+
+See the [Makefile](Makefile) for all available commands.
 
 ## Support
 

@@ -1,9 +1,22 @@
-from typing import Literal, Optional
+from typing import Literal
 from pydantic import BaseModel, Field
 from datetime import datetime
 
+
 class Ticket(BaseModel):
-    """Schema for an IT helpdesk ticket."""
+    """Schema for an IT helpdesk ticket.
+    
+    Attributes:
+        ticket_id: Human-readable ID for the ticket (e.g., IT-1A2B3C4D).
+        summary: Short summary of the user's issue.
+        service: The affected service (e.g., 'email', 'vpn', 'gitlab', 'wifi').
+        user_email: The user's work email address.
+        severity: Severity level based on impact and urgency.
+        status: Current status in the helpdesk workflow.
+        department: User's department, if known.
+        created_at: When the ticket was created (UTC).
+    """
+    
     ticket_id: str = Field(
         description="Human-readable ID for the ticket, e.g. IT-1A2B3C4D."
     )
@@ -24,7 +37,7 @@ class Ticket(BaseModel):
         default="open",
         description="Current status of the ticket in the helpdesk workflow.",
     )
-    department: Optional[str] = Field(
+    department: str | None = Field(
         default=None,
         description="User's department, if known.",
     )

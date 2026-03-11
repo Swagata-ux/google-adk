@@ -2,18 +2,9 @@ from typing import Dict, Any, Literal
 from datetime import datetime
 import uuid
 
-from google.adk.tools import FunctionTool
 from pydantic import BaseModel, Field
 
 from schemas.ticket import Ticket
-
-# Locked account 
-# VPN Outage
-
-# tool_trajectory_avg_score
-# response_match_score
-
-
 
 
 _FAKE_USER_DIRECTORY: Dict[str, Dict[str, Any]] = {
@@ -35,7 +26,6 @@ _FAKE_USER_DIRECTORY: Dict[str, Dict[str, Any]] = {
 }
 
 _FAKE_SERVICE_STATUS: Dict[str, str] = {
-
     "email": "operational",
     "vpn": "degraded",
     "gitlab": "outage",
